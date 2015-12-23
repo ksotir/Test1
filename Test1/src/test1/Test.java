@@ -9,6 +9,7 @@ public class Test {
 	private void temp1() {
 		// TODO: Test to-do note
 		System.out.println("@@@");
+		System.out.println("$$$");
 	}
 
 }
