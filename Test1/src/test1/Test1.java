@@ -1,14 +1,18 @@
 package test1;
 
-public class Test1 {
+public class Test1 extends Test2 {
 
 	public static void main(String[] args) {
-		//new Test1().temp1();
+//		new Test1().temp1();
 
-		Holder dog = new Holder("Max");
-		System.out.println("@@@" + dog.getName());
-		modify(dog);
-		System.out.println("%%%" + dog.getName());
+//		Holder dog = new Holder("Max");
+//		System.out.println("@@@" + dog.getName());
+//		modify(dog);
+//		System.out.println("%%%" + dog.getName());
+
+		Test2 t = new Test1();
+		t.print();
+		((Test1) t).print();
 	}
 
 	private void temp1() {
@@ -21,6 +25,11 @@ public class Test1 {
 		dog.setName("Sam");
 		dog = new Holder("Bob");
 		dog.setName("Rudolf");
+	}
+
+	@Override
+	public void print() {
+		System.out.println("Test 1");
 	}
 
 }
